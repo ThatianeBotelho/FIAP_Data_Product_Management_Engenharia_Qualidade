@@ -1,34 +1,34 @@
-[0m21:39:28  Running with dbt=1.12.5
-[0m21:39:28  dbt version: 1.12.5
-[0m21:39:28  python version: 3.14.2
-[0m21:39:28  python path: /workspaces/FIAP_Data_Product_Management_Engenharia_Qualidade/.venv/bin/python
-[0m21:39:28  os info: Linux-6.8.0-1064-azure-x86_64-with-glibc2.39
-[0m21:39:28  Using profiles dir at .
-[0m21:39:28  Using profiles.yml file at ./profiles.yml
-[0m21:39:28  Using dbt_project.yml file at /workspaces/FIAP_Data_Product_Management_Engenharia_Qualidade/dbt_project.yml
-[0m21:39:28  adapter type: duckdb
-[0m21:39:28  adapter version: 1.11.0
-[0m21:39:28  Configuration:
-[0m21:39:28    profiles.yml file [[32mOK found and valid[0m]
-[0m21:39:28    dbt_project.yml file [[32mOK found and valid[0m]
-[0m21:39:28  Required dependencies:
-[0m21:39:28   - git [[32mOK found[0m]
+[0m22:45:21  Running with dbt=1.12.5
+[0m22:45:21  dbt version: 1.12.5
+[0m22:45:21  python version: 3.14.2
+[0m22:45:21  python path: /workspaces/FIAP_Data_Product_Management_Engenharia_Qualidade/.venv/bin/python
+[0m22:45:21  os info: Linux-6.8.0-1064-azure-x86_64-with-glibc2.39
+[0m22:45:21  Using profiles dir at .
+[0m22:45:21  Using profiles.yml file at ./profiles.yml
+[0m22:45:21  Using dbt_project.yml file at /workspaces/FIAP_Data_Product_Management_Engenharia_Qualidade/dbt_project.yml
+[0m22:45:21  adapter type: duckdb
+[0m22:45:21  adapter version: 1.11.0
+[0m22:45:21  Configuration:
+[0m22:45:21    profiles.yml file [[32mOK found and valid[0m]
+[0m22:45:21    dbt_project.yml file [[32mOK found and valid[0m]
+[0m22:45:21  Required dependencies:
+[0m22:45:21   - git [[32mOK found[0m]
 
-[0m21:39:28  Connection:
-[0m21:39:28    database: analytics
-[0m21:39:28    schema: main
-[0m21:39:28    path: data/analytics.duckdb
-[0m21:39:28    config_options: None
-[0m21:39:28    extensions: None
-[0m21:39:28    settings: {}
-[0m21:39:28    external_root: .
-[0m21:39:28    use_credential_provider: None
-[0m21:39:28    attach: None
-[0m21:39:28    filesystems: None
-[0m21:39:28    remote: None
-[0m21:39:28    plugins: None
-[0m21:39:28    disable_transactions: False
-[0m21:39:28  Registered adapter: duckdb=1.11.0
-[0m21:39:28    Connection test: [[32mOK connection ok[0m]
+[0m22:45:21  Connection:
+[0m22:45:21    database: analytics
+[0m22:45:21    schema: main
+[0m22:45:21    path: data/analytics.duckdb
+[0m22:45:21    config_options: None
+[0m22:45:21    extensions: None
+[0m22:45:21    settings: {}
+[0m22:45:21    external_root: .
+[0m22:45:21    use_credential_provider: None
+[0m22:45:21    attach: None
+[0m22:45:21    filesystems: None
+[0m22:45:21    remote: None
+[0m22:45:21    plugins: None
+[0m22:45:21    disable_transactions: False
+[0m22:45:21  Registered adapter: duckdb=1.11.0
+[0m22:45:21    Connection test: [[32mOK connection ok[0m]
 
-[0m21:39:29  [32mAll checks passed![0m
+[0m22:45:21  [32mAll checks passed![0m
