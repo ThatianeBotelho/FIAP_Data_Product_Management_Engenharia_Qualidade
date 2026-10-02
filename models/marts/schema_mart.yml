@@ -1,0 +1,107 @@
+version: 2
+
+models:
+  - name: dim_customers
+    description: "Dimensão de clientes usada para validação referencial do Data Product."
+    columns:
+      - name: customer_id
+        data_tests:
+          - unique
+          - not_null
+      - name: customer_city
+      - name: customer_state
+
+  - name: fct_retail_sales
+    description: "Data Product analítico de vendas no grão Pedido + Produto."
+    config:
+      contract:
+        enforced: true
+
+    data_tests:
+      - dbt_expectations.expect_table_row_count_to_be_between:
+          arguments:
+            min_value: 50000
+            max_value: 150000
+
+    columns:
+      - name: sales_line_id
+        data_type: varchar
+        description: "Chave técnica formada por order_id + product_id."
+        constraints:
+          - type: not_null
+        data_tests:
+          - unique
+          - not_null
+
+      - name: sale_date
+        data_type: date
+        description: "Data em que o pedido foi realizado."
+        constraints:
+          - type: not_null
+        data_tests:
+          - not_null
+
+      - name: order_id
+        data_type: varchar
+        description: "Identificador do pedido."
+        constraints:
+          - type: not_null
+        data_tests:
+          - not_null
+
+      - name: customer_id
+        data_type: varchar
+        description: "Identificador único anonimizado do cliente."
+        constraints:
+          - type: not_null
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_customers')
+                field: customer_id
+
+      - name: product_id
+        data_type: varchar
+        description: "Identificador do produto."
+        constraints:
+          - type: not_null
+        data_tests:
+          - not_null
+
+      - name: quantity
+        data_type: integer
+        description: "Quantidade do produto no pedido."
+        data_tests:
+          - not_null
+          - dbt_expectations.expect_column_values_to_be_between:
+              arguments:
+                min_value: 1
+                max_value: 100
+
+      - name: sales_amount
+        data_type: decimal(18,2)
+        description: "Soma do preço dos itens. Frete não incluído."
+        data_tests:
+          - not_null
+          - dbt_expectations.expect_column_values_to_be_between:
+              arguments:
+                min_value: 0.01
+                max_value: 100000.00
+
+      - name: order_status
+        data_type: varchar
+        description: "Status operacional do pedido."
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values:
+                  - approved
+                  - canceled
+                  - created
+                  - delivered
+                  - invoiced
+                  - processing
+                  - shipped
+                  - unavailable

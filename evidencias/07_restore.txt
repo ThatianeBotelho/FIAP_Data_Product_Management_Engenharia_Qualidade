@@ -1,0 +1,8 @@
+========================================================================
+RESTAURAÇÃO CONCLUÍDA
+========================================================================
+Status corrompidos restantes: 0
+Preços negativos restantes:   0
+
+Execute novamente:
+dbt build --profiles-dir .

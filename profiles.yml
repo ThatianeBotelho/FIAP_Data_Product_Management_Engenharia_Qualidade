@@ -1,0 +1,8 @@
+fiap_retail_quality:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: data/analytics.duckdb
+      schema: main
+      threads: 4

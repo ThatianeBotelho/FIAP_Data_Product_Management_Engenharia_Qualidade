@@ -1,0 +1,23 @@
+[0m22:06:01  Running with dbt=1.12.5
+[0m22:06:01  Registered adapter: duckdb=1.11.0
+[0m22:06:03  Found 5 models, 33 data tests, 3 sources, 821 macros
+[0m22:06:03  
+[0m22:06:03  Concurrency: 4 threads (target='dev')
+[0m22:06:03  
+[0m22:06:03  1 of 1 START sql table model main.fct_retail_sales ............................. [RUN]
+[0m22:06:04  1 of 1 ERROR creating sql table model main.fct_retail_sales .................... [[31mERROR[0m in 0.44s]
+[0m22:06:04  
+[0m22:06:04  Finished running 1 table model in 0 hours 0 minutes and 0.58 seconds (0.58s).
+[0m22:06:04  
+[0m22:06:04  [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m22:06:04  
+[0m22:06:04  [[31mERROR[0m]: in model fct_retail_sales (models/marts/fct_retail_sales.sql)
+[0m22:06:04    Runtime Error in model fct_retail_sales (models/marts/fct_retail_sales.sql)
+  Parser Error: syntax error at or near "'EXTRA'"
+  
+  LINE 49:     'EXTRA' as coluna_nao_contratada
+               ^
+[0m22:06:04  
+[0m22:06:04    compiled code at target/compiled/fiap_retail_quality/models/marts/fct_retail_sales.sql
+[0m22:06:04  
+[0m22:06:04  Done. PASS=0 WARN=0 ERROR=1 SKIP=0 NO-OP=0 REUSED=0 TOTAL=1

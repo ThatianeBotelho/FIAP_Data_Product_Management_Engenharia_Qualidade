@@ -1,0 +1,28 @@
+========================================================================
+RESUMO DO DATA PRODUCT
+========================================================================
+ sales_lines  orders  customers    units  sales_amount
+      102425   98666      95420 112650.0    13591643.7
+
+VENDAS POR STATUS
+order_status  sales_lines  sales_amount
+   delivered       100196   13221498.11
+     shipped         1127     150727.44
+    canceled          465      95235.27
+    invoiced          322      61526.37
+  processing          306      60439.22
+ unavailable            7       2007.69
+    approved            2        209.60
+
+AMOSTRA
+                                                    sales_line_id  sale_date                         order_id                      customer_id                       product_id  quantity  sales_amount order_status
+2e7a8482f6fb09756ca50c10d7bfc047-c1488892604e4ba5cff5b4eb4d595400 2016-09-04 2e7a8482f6fb09756ca50c10d7bfc047 b7d76e111c89f7ebf14761390f0f7d17 c1488892604e4ba5cff5b4eb4d595400         1         39.99      shipped
+2e7a8482f6fb09756ca50c10d7bfc047-f293394c72c9b5fafd7023301fc21fc2 2016-09-04 2e7a8482f6fb09756ca50c10d7bfc047 b7d76e111c89f7ebf14761390f0f7d17 f293394c72c9b5fafd7023301fc21fc2         1         32.90      shipped
+e5fa5a7210941f7d56d0208e4e071d35-f3c2d01a84c947b078e32bbef0718962 2016-09-05 e5fa5a7210941f7d56d0208e4e071d35 4854e9b3feff728c13ee5fc7d1547e92 f3c2d01a84c947b078e32bbef0718962         1         59.50     canceled
+bfbd0f9bdef84302105ad712db648a6c-5a6b04657a4c5ee34285d1e4619a96b4 2016-09-15 bfbd0f9bdef84302105ad712db648a6c 830d5b7aaa3b6f1e9ad63703bec97d23 5a6b04657a4c5ee34285d1e4619a96b4         3        134.97    delivered
+71303d7e93b399f5bcd537d124c0bcfa-d2998d7ced12f83f9b832f33cf6507b6 2016-10-02 71303d7e93b399f5bcd537d124c0bcfa 0eb1ee9dba87f5b36b4613a65074337c d2998d7ced12f83f9b832f33cf6507b6         1        100.00     canceled
+3b697a20d9e427646d92567910af6d57-3ae08df6bcbfe23586dd431c40bddbb7 2016-10-03 3b697a20d9e427646d92567910af6d57 32ea3bdedab835c3aa6cb68ce66565ef 3ae08df6bcbfe23586dd431c40bddbb7         1         29.90    delivered
+65d1e226dfaeb8cdc42f665422522d14-9c7bdf67b06b419aefb93cfdfc96c55d 2016-10-03 65d1e226dfaeb8cdc42f665422522d14 b8b8726af116a5cfb35b0315ecef9172 9c7bdf67b06b419aefb93cfdfc96c55d         1         21.50     canceled
+a41c8759fbe7aab36ea07e038b2d4465-b72b39418216e944bb34e35f4d3ea8c7 2016-10-03 a41c8759fbe7aab36ea07e038b2d4465 61db744d2f835035a5625b59350c6b63 b72b39418216e944bb34e35f4d3ea8c7         1         36.49    delivered
+ae8a60e4b03c5a4ba9ca0672c164b181-a5c3ddb1a400f50d1cf7138727aec136 2016-10-03 ae8a60e4b03c5a4ba9ca0672c164b181 7390ed59fa1febbfda31a80b4318c8cb a5c3ddb1a400f50d1cf7138727aec136         1        128.90    delivered
+be5bc2f0da14d8071e2d45451ad119d9-fd7fd78fd3cbc1b0a6370a7909c0a629 2016-10-03 be5bc2f0da14d8071e2d45451ad119d9 2f64e403852e6893ae37485d5fcacdaf fd7fd78fd3cbc1b0a6370a7909c0a629         1         21.90    delivered

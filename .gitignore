@@ -1,0 +1,20 @@
+# Data
+data/
+
+# dbt
+target/
+dbt_packages/
+logs/
+.partial_parse.msgpack
+.user.yml
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# OS / IDE
+.DS_Store
+.vscode/
+.idea/

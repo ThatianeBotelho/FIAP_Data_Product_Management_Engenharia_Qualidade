@@ -1,0 +1,9 @@
+========================================================================
+PREPARANDO FONTES OLIST NO DUCKDB
+========================================================================
+[OK] raw.orders:      99,441 linhas
+[OK] raw.order_items: 112,650 linhas
+[OK] raw.customers:   99,441 linhas
+[OK] Banco criado: data/analytics.duckdb
+[OK] Backups canônicos criados para restauração do experimento.
+========================================================================

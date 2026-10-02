@@ -1,0 +1,16 @@
+========================================================================
+DADOS CORROMPIDOS INJETADOS PARA O EXPERIMENTO
+========================================================================
+[CORRUPÇÃO 1] order_id=00010242fe8c5a6d1ba2dd792cb16214
+               order_status='CORRUPTED_STATUS'
+
+[CORRUPÇÃO 2] order_id=00010242fe8c5a6d1ba2dd792cb16214 | order_item_id=1 | product_id=4244733e06e7ecb4970a6e2683c13e61
+               price=-999.50
+
+Agora execute:
+dbt build --profiles-dir .
+
+Resultado esperado:
+- testes da camada Staging falham;
+- o Mart downstream não é reconstruído;
+- a esteira é bloqueada antes de publicar a nova versão.

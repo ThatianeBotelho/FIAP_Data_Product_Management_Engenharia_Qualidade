@@ -1,0 +1,13 @@
+version: 2
+
+sources:
+  - name: olist_raw
+    description: "Tabelas Olist carregadas localmente no DuckDB."
+    schema: raw
+    tables:
+      - name: orders
+        description: "Pedidos da Olist."
+      - name: order_items
+        description: "Itens dos pedidos da Olist."
+      - name: customers
+        description: "Cadastro de clientes da Olist."

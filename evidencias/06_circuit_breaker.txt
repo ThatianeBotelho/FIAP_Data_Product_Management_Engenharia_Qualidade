@@ -1,0 +1,82 @@
+[0m22:03:51  Running with dbt=1.12.5
+[0m22:03:51  Registered adapter: duckdb=1.11.0
+[0m22:03:52  Found 5 models, 33 data tests, 3 sources, 821 macros
+[0m22:03:52  
+[0m22:03:52  Concurrency: 4 threads (target='dev')
+[0m22:03:52  
+[0m22:03:52  2 of 38 START sql view model main.stg_order_items .............................. [RUN]
+[0m22:03:52  1 of 38 START sql view model main.stg_customers ................................ [RUN]
+[0m22:03:52  3 of 38 START sql view model main.stg_orders ................................... [RUN]
+[0m22:03:53  1 of 38 OK created sql view model main.stg_customers ........................... [[32mOK[0m in 0.47s]
+[0m22:03:53  2 of 38 OK created sql view model main.stg_order_items ......................... [[32mOK[0m in 0.46s]
+[0m22:03:53  5 of 38 START test dbt_expectations_expect_column_values_to_be_between_stg_order_items_price__100000_0__0_01  [RUN]
+[0m22:03:53  6 of 38 START test not_null_stg_customers_customer_id .......................... [RUN]
+[0m22:03:53  4 of 38 START test dbt_expectations_expect_column_values_to_be_between_stg_order_items_freight_value__100000_0__0  [RUN]
+[0m22:03:53  3 of 38 OK created sql view model main.stg_orders .............................. [[32mOK[0m in 0.46s]
+[0m22:03:53  7 of 38 START test not_null_stg_customers_source_customer_id ................... [RUN]
+[0m22:03:53  4 of 38 PASS dbt_expectations_expect_column_values_to_be_between_stg_order_items_freight_value__100000_0__0  [[32mPASS[0m in 0.18s]
+[0m22:03:53  6 of 38 PASS not_null_stg_customers_customer_id ................................ [[32mPASS[0m in 0.19s]
+[0m22:03:53  5 of 38 FAIL 1 dbt_expectations_expect_column_values_to_be_between_stg_order_items_price__100000_0__0_01  [[31mFAIL 1[0m in 0.19s]
+[0m22:03:53  8 of 38 START test not_null_stg_order_items_freight_value ...................... [RUN]
+[0m22:03:53  9 of 38 START test not_null_stg_order_items_order_id ........................... [RUN]
+[0m22:03:53  10 of 38 START test not_null_stg_order_items_order_item_id ..................... [RUN]
+[0m22:03:53  7 of 38 PASS not_null_stg_customers_source_customer_id ......................... [[32mPASS[0m in 0.13s]
+[0m22:03:53  11 of 38 START test not_null_stg_order_items_price ............................. [RUN]
+[0m22:03:53  8 of 38 PASS not_null_stg_order_items_freight_value ............................ [[32mPASS[0m in 0.16s]
+[0m22:03:53  9 of 38 PASS not_null_stg_order_items_order_id ................................. [[32mPASS[0m in 0.16s]
+[0m22:03:53  12 of 38 START test not_null_stg_order_items_product_id ........................ [RUN]
+[0m22:03:53  10 of 38 PASS not_null_stg_order_items_order_item_id ........................... [[32mPASS[0m in 0.16s]
+[0m22:03:53  13 of 38 START test unique_stg_customers_source_customer_id .................... [RUN]
+[0m22:03:53  11 of 38 PASS not_null_stg_order_items_price ................................... [[32mPASS[0m in 0.14s]
+[0m22:03:53  14 of 38 START test accepted_values_stg_orders_order_status__approved__canceled__created__delivered__invoiced__processing__shipped__unavailable  [RUN]
+[0m22:03:53  15 of 38 START test not_null_stg_orders_order_id ............................... [RUN]
+[0m22:03:53  12 of 38 PASS not_null_stg_order_items_product_id .............................. [[32mPASS[0m in 0.17s]
+[0m22:03:53  16 of 38 START test not_null_stg_orders_order_purchase_timestamp ............... [RUN]
+[0m22:03:53  15 of 38 PASS not_null_stg_orders_order_id ..................................... [[32mPASS[0m in 0.14s]
+[0m22:03:53  17 of 38 START test not_null_stg_orders_order_status ........................... [RUN]
+[0m22:03:53  14 of 38 FAIL 1 accepted_values_stg_orders_order_status__approved__canceled__created__delivered__invoiced__processing__shipped__unavailable  [[31mFAIL 1[0m in 0.19s]
+[0m22:03:53  13 of 38 PASS unique_stg_customers_source_customer_id .......................... [[32mPASS[0m in 0.22s]
+[0m22:03:53  18 of 38 START test not_null_stg_orders_source_customer_id ..................... [RUN]
+[0m22:03:53  19 of 38 START test unique_stg_orders_order_id ................................. [RUN]
+[0m22:03:53  16 of 38 PASS not_null_stg_orders_order_purchase_timestamp ..................... [[32mPASS[0m in 0.12s]
+[0m22:03:53  17 of 38 PASS not_null_stg_orders_order_status ................................. [[32mPASS[0m in 0.08s]
+[0m22:03:53  20 of 38 START sql table model main.dim_customers .............................. [RUN]
+[0m22:03:53  18 of 38 PASS not_null_stg_orders_source_customer_id ........................... [[32mPASS[0m in 0.09s]
+[0m22:03:53  19 of 38 PASS unique_stg_orders_order_id ....................................... [[32mPASS[0m in 0.15s]
+[0m22:03:53  21 of 38 SKIP relation main.fct_retail_sales ................................... [[33mSKIP[0m]
+[0m22:03:53  22 of 38 SKIP test accepted_values_fct_retail_sales_order_status__approved__canceled__created__delivered__invoiced__processing__shipped__unavailable  [[33mSKIP[0m]
+[0m22:03:53  24 of 38 SKIP test dbt_expectations_expect_column_values_to_be_between_fct_retail_sales_quantity__100__1  [[33mSKIP[0m]
+[0m22:03:53  23 of 38 SKIP test assert_sales_amount_reconciliation .......................... [[33mSKIP[0m]
+[0m22:03:53  25 of 38 SKIP test dbt_expectations_expect_column_values_to_be_between_fct_retail_sales_sales_amount__100000_0__0_01  [[33mSKIP[0m]
+[0m22:03:53  26 of 38 SKIP test dbt_expectations_expect_table_row_count_to_be_between_fct_retail_sales_150000__50000  [[33mSKIP[0m]
+[0m22:03:53  27 of 38 SKIP test not_null_fct_retail_sales_customer_id ....................... [[33mSKIP[0m]
+[0m22:03:53  28 of 38 SKIP test not_null_fct_retail_sales_order_id .......................... [[33mSKIP[0m]
+[0m22:03:54  29 of 38 SKIP test not_null_fct_retail_sales_order_status ...................... [[33mSKIP[0m]
+[0m22:03:54  30 of 38 SKIP test not_null_fct_retail_sales_product_id ........................ [[33mSKIP[0m]
+[0m22:03:54  31 of 38 SKIP test not_null_fct_retail_sales_quantity .......................... [[33mSKIP[0m]
+[0m22:03:54  32 of 38 SKIP test not_null_fct_retail_sales_sale_date ......................... [[33mSKIP[0m]
+[0m22:03:54  33 of 38 SKIP test not_null_fct_retail_sales_sales_amount ...................... [[33mSKIP[0m]
+[0m22:03:54  34 of 38 SKIP test not_null_fct_retail_sales_sales_line_id ..................... [[33mSKIP[0m]
+[0m22:03:54  35 of 38 SKIP test unique_fct_retail_sales_sales_line_id ....................... [[33mSKIP[0m]
+[0m22:03:54  20 of 38 OK created sql table model main.dim_customers ......................... [[32mOK[0m in 0.48s]
+[0m22:03:54  37 of 38 SKIP test relationships_fct_retail_sales_customer_id__customer_id__ref_dim_customers_  [[33mSKIP[0m]
+[0m22:03:54  38 of 38 START test unique_dim_customers_customer_id ........................... [RUN]
+[0m22:03:54  36 of 38 START test not_null_dim_customers_customer_id ......................... [RUN]
+[0m22:03:54  36 of 38 PASS not_null_dim_customers_customer_id ............................... [[32mPASS[0m in 0.05s]
+[0m22:03:54  38 of 38 PASS unique_dim_customers_customer_id ................................. [[32mPASS[0m in 0.06s]
+[0m22:03:54  
+[0m22:03:54  Finished running 2 table models, 33 data tests, 3 view models in 0 hours 0 minutes and 1.93 seconds (1.93s).
+[0m22:03:54  
+[0m22:03:54  [31mCompleted with 2 errors, 0 partial successes, and 0 warnings:[0m
+[0m22:03:54  
+[0m22:03:54  [[31mERROR[0m]: in test dbt_expectations_expect_column_values_to_be_between_stg_order_items_price__100000_0__0_01 (models/staging/schema_stg.yml)
+[0m22:03:54    Got 1 result, configured to fail if != 0
+[0m22:03:54  
+[0m22:03:54    compiled code at target/compiled/fiap_retail_quality/models/staging/schema_stg.yml/dbt_expectations_expect_column_be19dd23b924de92aa356565e3d168a0.sql
+[0m22:03:54  
+[0m22:03:54  [[31mERROR[0m]: in test accepted_values_stg_orders_order_status__approved__canceled__created__delivered__invoiced__processing__shipped__unavailable (models/staging/schema_stg.yml)
+[0m22:03:54    Got 1 result, configured to fail if != 0
+[0m22:03:54  
+[0m22:03:54    compiled code at target/compiled/fiap_retail_quality/models/staging/schema_stg.yml/accepted_values_stg_orders_d06f0e0894b264869f231c3b6dcfa34f.sql
+[0m22:03:54  
+[0m22:03:54  Done. PASS=20 WARN=0 ERROR=2 SKIP=16 NO-OP=0 REUSED=0 TOTAL=38
